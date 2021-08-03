@@ -8,7 +8,7 @@ import "./PlayingCardList.css";
  * Can also add a new card at random. */
 function CardTable() {
   const [cards, addCard] = useAxios(
-    "http://deckofcardsapi.com/api/deck/new/draw/",
+    () => "http://deckofcardsapi.com/api/deck/new/draw/",
     (res) => res.data.cards[0]
   );
   return (
